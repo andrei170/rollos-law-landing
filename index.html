@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rollos Law LLP | Solicitors in St Andrews & Fife</title>
+<meta name="description" content="Rollos Law LLP is a longstanding Fife law firm with offices in St Andrews, Cupar, Glenrothes and Auchtermuchty. Family law, private client, property and court work across North East Fife.">
+<style>
+  :root{
+    --navy:#15233f;
+    --navy-deep:#0e1830;
+    --burgundy:#7a1f2b;
+    --gold:#b08d57;
+    --gold-soft:#c9a877;
+    --ink:#23262d;
+    --muted:#5b616e;
+    --line:#e3e1da;
+    --paper:#ffffff;
+    --cream:#f7f5f0;
+    --cream-2:#efece4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.wordmark,.btn,nav a,.eyebrow{font-family:'Helvetica Neue',Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(21,35,63,.97);backdrop-filter:blur(6px);border-bottom:1px solid rgba(176,141,87,.3)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .wordmark{display:flex;flex-direction:column;line-height:1;color:#fff}
+  .wordmark .mark{font-size:1.6rem;font-weight:700;letter-spacing:.04em}
+  .wordmark .mark span{color:var(--gold-soft)}
+  .wordmark .sub{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-soft);margin-top:4px}
+  nav.links{display:flex;gap:30px;align-items:center}
+  nav.links a{color:#dfe2ea;font-size:.83rem;letter-spacing:.04em;font-weight:600;transition:color .2s}
+  nav.links a:hover{color:var(--gold-soft)}
+  .nav-cta{background:var(--gold);color:var(--navy-deep)!important;padding:11px 22px;border-radius:3px;font-weight:700;font-size:.8rem!important}
+  .nav-cta:hover{background:var(--gold-soft);color:var(--navy-deep)!important}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0}
+  .burger span{width:26px;height:2px;background:#fff;display:block}
+
+  /* HERO */
+  .hero{position:relative;background:
+      radial-gradient(1100px 540px at 78% -10%, rgba(176,141,87,.20), transparent 60%),
+      linear-gradient(155deg,var(--navy-deep) 0%, var(--navy) 55%, #1c2c4d 100%);
+      color:#fff;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background-image:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 1px, transparent 1px 64px);opacity:.5}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .85fr;gap:48px;align-items:center;padding:92px 0 96px}
+  .hero h1{font-size:3.05rem;line-height:1.08;font-weight:700;margin:18px 0 20px;letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:var(--gold-soft);font-family:Georgia,serif}
+  .hero p.lead{font-size:1.12rem;color:#d4d9e4;max-width:38ch;margin-bottom:30px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:15px 30px;border-radius:3px;font-weight:700;font-size:.86rem;letter-spacing:.03em;cursor:pointer;border:0;transition:.2s}
+  .btn-gold{background:var(--gold);color:var(--navy-deep)}
+  .btn-gold:hover{background:var(--gold-soft)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+  .btn-ghost:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+  .hero-card{background:rgba(255,255,255,.05);border:1px solid rgba(176,141,87,.34);border-radius:8px;padding:30px 30px 26px;backdrop-filter:blur(3px)}
+  .crest{width:78px;height:78px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:rgba(176,141,87,.10)}
+  .crest span{font-family:Georgia,serif;font-size:2.1rem;color:var(--gold-soft);font-weight:700}
+  .hero-card h3{font-size:1.02rem;color:#fff;margin-bottom:6px;letter-spacing:.02em}
+  .hero-card ul{list-style:none;margin-top:14px}
+  .hero-card li{font-size:.9rem;color:#cfd5e1;padding:7px 0 7px 24px;position:relative;border-top:1px solid rgba(255,255,255,.08)}
+  .hero-card li:first-child{border-top:0}
+  .hero-card li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+
+  /* TRUST STRIP */
+  .strip{background:var(--cream-2);border-bottom:1px solid var(--line)}
+  .strip-inner{display:flex;flex-wrap:wrap;justify-content:space-around;gap:18px;padding:26px 0;text-align:center}
+  .strip .item{flex:1;min-width:160px}
+  .strip .n{font-family:'Helvetica Neue',Arial,sans-serif;font-size:1.7rem;font-weight:700;color:var(--burgundy)}
+  .strip .l{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+  /* SECTION SHELL */
+  section.block{padding:84px 0}
+  .sec-head{text-align:center;max-width:660px;margin:0 auto 52px}
+  .sec-head h2{font-size:2.2rem;color:var(--navy);margin:12px 0 10px;font-weight:700;letter-spacing:-.01em}
+  .sec-head p{color:var(--muted);font-size:1.04rem}
+  .rule{width:54px;height:3px;background:var(--gold);margin:0 auto}
+
+  /* SERVICES */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:32px 28px;transition:.25s;position:relative}
+  .card:hover{box-shadow:0 18px 40px -22px rgba(21,35,63,.5);transform:translateY(-4px);border-color:var(--gold-soft)}
+  .ic{width:60px;height:60px;margin-bottom:20px}
+  .card h3{font-size:1.22rem;color:var(--navy);margin-bottom:10px}
+  .card p{font-size:.95rem;color:var(--muted)}
+
+  /* PARTNERS */
+  .partners{background:var(--cream)}
+  .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:880px;margin:0 auto}
+  .pcard{display:flex;gap:24px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px;align-items:center}
+  .mono{flex-shrink:0;width:96px;height:96px;border-radius:6px;background:linear-gradient(150deg,var(--navy),var(--burgundy));display:flex;align-items:center;justify-content:center}
+  .mono span{font-family:Georgia,serif;font-size:2.1rem;color:var(--gold-soft);font-weight:700;letter-spacing:.02em}
+  .pcard h3{font-size:1.25rem;color:var(--navy)}
+  .pcard .role{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:4px 0 8px}
+  .pcard p{font-size:.92rem;color:var(--muted)}
+
+  /* AREAS */
+  .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .area{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px 22px;text-align:center}
+  .area svg{width:34px;height:34px;margin-bottom:12px}
+  .area h3{font-size:1.08rem;color:var(--navy);margin-bottom:4px}
+  .area p{font-size:.82rem;color:var(--muted)}
+
+  /* HERITAGE */
+  .heritage{background:linear-gradient(150deg,var(--navy-deep),var(--navy));color:#fff;text-align:center}
+  .heritage .wrap{max-width:760px}
+  .heritage h2{color:#fff;font-size:2rem;margin:14px 0}
+  .heritage p{color:#d4d9e4;font-size:1.08rem}
+  .heritage .accent{color:var(--gold-soft);font-style:italic}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:start}
+  .offices .office{padding:18px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+  .offices .office:last-child{border-bottom:0}
+  .offices svg{width:22px;height:22px;flex-shrink:0;margin-top:3px}
+  .offices h4{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.95rem;color:var(--navy);letter-spacing:.02em}
+  .offices p{font-size:.9rem;color:var(--muted)}
+  form.mock{background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:30px}
+  form.mock label{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px;font-weight:700}
+  form.mock label:first-child{margin-top:0}
+  form.mock input,form.mock select,form.mock textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:4px;font-family:Georgia,serif;font-size:.95rem;background:#fff;color:var(--ink)}
+  form.mock textarea{resize:vertical;min-height:96px}
+  form.mock .btn-gold{width:100%;margin-top:20px}
+
+  /* FOOTER */
+  footer{background:var(--navy-deep);color:#aab2c4;padding:54px 0 30px;font-size:.86rem}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1)}
+  footer .wordmark .mark{font-size:1.35rem}
+  footer h5{font-family:'Helvetica Neue',Arial,sans-serif;color:#fff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+  footer ul{list-style:none}
+  footer li{padding:5px 0}
+  footer a:hover{color:var(--gold-soft)}
+  .foot-bottom{padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.78rem;color:#7f879b}
+  .regline{color:#9aa2b6}
+  .foot-bottom a{color:var(--gold-soft)}
+  .disclaimer{background:#0a1126;text-align:center;padding:12px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.72rem;letter-spacing:.04em;color:#6f7891}
+
+  @media(max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:36px;padding:64px 0 70px}
+    .hero h1{font-size:2.4rem}
+    .grid{grid-template-columns:1fr 1fr}
+    .areas-grid{grid-template-columns:1fr 1fr}
+    .pgrid,.contact-grid,.foot-top{grid-template-columns:1fr}
+    nav.links{display:none}
+    .burger{display:flex}
+  }
+  @media(max-width:560px){
+    .grid{grid-template-columns:1fr}
+    .areas-grid{grid-template-columns:1fr 1fr}
+    .strip-inner{flex-direction:column}
+    .hero h1{font-size:2.05rem}
+    .pcard{flex-direction:column;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="#top">
+      <span class="mark">Rollos<span>.</span></span>
+      <span class="sub">Law LLP &middot; St Andrews</span>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#partners">Our Partners</a>
+      <a href="#areas">Where We Practise</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Request a Call</a>
+    </nav>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Solicitors &amp; Estate Agents &middot; Fife since 2012</span>
+      <h1>St Andrews law, with <em>Fife-wide</em> reach.</h1>
+      <p class="lead">Family law, private client, property and court work, handled by a firm that has served North East Fife for generations from offices in St Andrews, Cupar, Glenrothes and Auchtermuchty.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gold">Speak to a Solicitor</a>
+        <a href="#services" class="btn btn-ghost">View Our Services</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="crest"><span>R</span></div>
+      <h3>How we can help you</h3>
+      <p style="font-size:.86rem;color:#cfd5e1;margin-top:2px">A full-service practice for individuals, families and businesses.</p>
+      <ul>
+        <li>Family &amp; matrimonial law</li>
+        <li>Wills, powers of attorney &amp; executries</li>
+        <li>Residential &amp; commercial property</li>
+        <li>Court, civil disputes &amp; employment</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <div class="item"><div class="n">4</div><div class="l">Fife Offices</div></div>
+    <div class="item"><div class="n">5</div><div class="l">Practice Areas</div></div>
+    <div class="item"><div class="n">St Andrews</div><div class="l">Home in the Auld Grey Toun</div></div>
+    <div class="item"><div class="n">LLP</div><div class="l">Trading Since 2012</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <h2>Legal services across every chapter of life</h2>
+      <p>Whether you are buying a home, planning your estate, navigating a family matter or running a business, you will work with a named solicitor who knows your case.</p>
+    </div>
+    <div class="grid">
+
+      <!-- FAMILY: two figures -->
+      <div class="card">
+        <svg class="ic" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Family law">
+          <circle cx="22" cy="18" r="9" fill="#7a1f2b"/>
+          <path d="M7 50c0-9 7-15 15-15s15 6 15 15v3H7z" fill="#15233f"/>
+          <circle cx="44" cy="22" r="7.5" fill="#b08d57"/>
+          <path d="M32 52c0-8 6-13 12-13s12 5 12 13v2H32z" fill="#2b3c5e"/>
+        </svg>
+        <h3>Family Law</h3>
+        <p>Separation, divorce, financial settlements, child arrangements and cohabitation matters, advised with care and discretion.</p>
+      </div>
+
+      <!-- PRIVATE CLIENT: signed scroll/will -->
+      <div class="card">
+        <svg class="ic" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Private client and wills">
+          <path d="M14 8h30a6 6 0 0 1 6 6v34l-7-5-6 5-6-5-6 5-7-5z" fill="#15233f"/>
+          <rect x="20" y="18" width="24" height="3.4" rx="1.7" fill="#b08d57"/>
+          <rect x="20" y="26" width="24" height="3.4" rx="1.7" fill="#c9a877"/>
+          <rect x="20" y="34" width="16" height="3.4" rx="1.7" fill="#c9a877"/>
+          <circle cx="45" cy="42" r="6" fill="#7a1f2b"/>
+        </svg>
+        <h3>Private Client</h3>
+        <p>Wills, powers of attorney, executries and estate planning that protect what matters most to you and your family.</p>
+      </div>
+
+      <!-- RESIDENTIAL PROPERTY: house + key -->
+      <div class="card">
+        <svg class="ic" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Residential property">
+          <path d="M32 8 8 27v3h6v22h36V30h6v-3z" fill="#15233f"/>
+          <rect x="27" y="36" width="12" height="16" fill="#b08d57"/>
+          <circle cx="44" cy="44" r="5" fill="none" stroke="#7a1f2b" stroke-width="3.4"/>
+          <rect x="46" y="46" width="11" height="3.4" fill="#7a1f2b"/>
+          <rect x="54" y="49" width="3.4" height="5" fill="#7a1f2b"/>
+        </svg>
+        <h3>Residential Property</h3>
+        <p>Buying, selling and remortgaging homes across Fife, with conveyancing handled start to finish by your local solicitor.</p>
+      </div>
+
+      <!-- COMMERCIAL: building + handshake -->
+      <div class="card">
+        <svg class="ic" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Commercial property and business">
+          <rect x="12" y="10" width="22" height="44" fill="#15233f"/>
+          <rect x="17" y="16" width="5" height="5" fill="#c9a877"/><rect x="24" y="16" width="5" height="5" fill="#c9a877"/>
+          <rect x="17" y="25" width="5" height="5" fill="#c9a877"/><rect x="24" y="25" width="5" height="5" fill="#c9a877"/>
+          <rect x="17" y="34" width="5" height="5" fill="#c9a877"/><rect x="24" y="34" width="5" height="5" fill="#c9a877"/>
+          <rect x="36" y="22" width="16" height="32" fill="#2b3c5e"/>
+          <path d="M38 44l5 4 7-7" fill="none" stroke="#b08d57" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Commercial Property</h3>
+        <p>Leases, acquisitions, disposals and commercial agreements for businesses and landlords throughout the region.</p>
+      </div>
+
+      <!-- COURT: columns + gavel -->
+      <div class="card">
+        <svg class="ic" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Court and civil disputes">
+          <path d="M32 6 9 17v4h46v-4z" fill="#7a1f2b"/>
+          <rect x="14" y="23" width="5" height="22" fill="#15233f"/>
+          <rect x="24" y="23" width="5" height="22" fill="#15233f"/>
+          <rect x="35" y="23" width="5" height="22" fill="#15233f"/>
+          <rect x="45" y="23" width="5" height="22" fill="#15233f"/>
+          <rect x="9" y="47" width="46" height="5" fill="#2b3c5e"/>
+          <rect x="38" y="30" width="16" height="6" rx="3" transform="rotate(40 46 33)" fill="#b08d57"/>
+        </svg>
+        <h3>Court &amp; Disputes</h3>
+        <p>Civil disputes, debt recovery, employment matters and litigation, with clear advice on your options at every stage.</p>
+      </div>
+
+      <!-- EMPLOYMENT / ADVICE: figure + scales -->
+      <div class="card">
+        <svg class="ic" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Employment and general advice">
+          <rect x="30" y="10" width="4" height="40" rx="2" fill="#15233f"/>
+          <rect x="18" y="18" width="28" height="3.4" rx="1.7" fill="#b08d57"/>
+          <path d="M18 20 12 34h12z" fill="#2b3c5e"/>
+          <path d="M46 20 40 34h12z" fill="#2b3c5e"/>
+          <rect x="22" y="50" width="20" height="5" rx="2" fill="#7a1f2b"/>
+        </svg>
+        <h3>Employment &amp; Advice</h3>
+        <p>Contracts, settlement agreements and workplace disputes for both individuals and employers across Fife.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="block partners" id="partners">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <h2>Led by senior partners you can name</h2>
+      <p>You are not a file number. Your matter is overseen by an experienced partner who is accountable to you from first call to final outcome.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pcard">
+        <div class="mono"><span>TA</span></div>
+        <div>
+          <h3>Tony Anderson</h3>
+          <div class="role">Senior Partner</div>
+          <p>A senior partner of the firm, advising clients across the practice with the steady, plain-spoken counsel that long Fife relationships are built on.</p>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="mono"><span>KS</span></div>
+        <div>
+          <h3>Ken Smith</h3>
+          <div class="role">Senior Partner</div>
+          <p>A senior partner of the firm, guiding individuals, families and businesses through their legal matters with experience earned over many years in North East Fife.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="block" id="areas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <h2>Where we practise</h2>
+      <p>Four offices across North East Fife mean local advice, close to home, wherever you are in the region.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="St Andrews"><path d="M16 2C9 2 4 7 4 14c0 8 12 16 12 16s12-8 12-16C28 7 23 2 16 2z" fill="#15233f"/><circle cx="16" cy="13" r="4.5" fill="#b08d57"/></svg>
+        <h3>St Andrews</h3>
+        <p>6 Bell Street &middot; Head Office</p>
+      </div>
+      <div class="area">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cupar"><path d="M16 2C9 2 4 7 4 14c0 8 12 16 12 16s12-8 12-16C28 7 23 2 16 2z" fill="#7a1f2b"/><circle cx="16" cy="13" r="4.5" fill="#c9a877"/></svg>
+        <h3>Cupar</h3>
+        <p>County town of Fife</p>
+      </div>
+      <div class="area">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glenrothes"><path d="M16 2C9 2 4 7 4 14c0 8 12 16 12 16s12-8 12-16C28 7 23 2 16 2z" fill="#15233f"/><circle cx="16" cy="13" r="4.5" fill="#b08d57"/></svg>
+        <h3>Glenrothes</h3>
+        <p>Central Fife</p>
+      </div>
+      <div class="area">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Auchtermuchty"><path d="M16 2C9 2 4 7 4 14c0 8 12 16 12 16s12-8 12-16C28 7 23 2 16 2z" fill="#7a1f2b"/><circle cx="16" cy="13" r="4.5" fill="#c9a877"/></svg>
+        <h3>Auchtermuchty</h3>
+        <p>North East Fife</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE -->
+<section class="block heritage">
+  <div class="wrap">
+    <span class="eyebrow">A Longstanding Fife Name</span>
+    <h2>Rooted in St Andrews. Trusted across Fife.</h2>
+    <p>Rollos has long been a familiar name to families and businesses in North East Fife. Trading as <span class="accent">Rollos Law LLP since 2012</span>, the firm has grown while keeping what mattered from the start: clear advice, a named solicitor you can speak to, and a genuine commitment to the communities it serves. When you instruct us, you are working with people who understand this corner of Scotland.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="block" id="contact" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rule"></div>
+      <h2>Get in touch</h2>
+      <p>Tell us a little about your matter and the right solicitor will be in touch. There is no obligation.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="offices">
+        <div class="office">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Head office"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" fill="#7a1f2b"/><circle cx="12" cy="9" r="3" fill="#fff"/></svg>
+          <div><h4>St Andrews (Head Office)</h4><p>6 Bell Street, St Andrews, Fife, KY16 9UX</p></div>
+        </div>
+        <div class="office">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Offices"><rect x="4" y="4" width="16" height="16" rx="2" fill="#15233f"/><rect x="8" y="8" width="3" height="3" fill="#b08d57"/><rect x="13" y="8" width="3" height="3" fill="#b08d57"/><rect x="8" y="13" width="3" height="3" fill="#b08d57"/><rect x="13" y="13" width="3" height="3" fill="#b08d57"/></svg>
+          <div><h4>Further Offices</h4><p>Cupar &middot; Glenrothes &middot; Auchtermuchty</p></div>
+        </div>
+        <div class="office">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Online"><circle cx="12" cy="12" r="9" fill="none" stroke="#7a1f2b" stroke-width="2.4"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="#b08d57" stroke-width="2"/></svg>
+          <div><h4>Online</h4><p>rollos.co.uk</p></div>
+        </div>
+        <div class="office">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Opening hours"><circle cx="12" cy="12" r="9" fill="#15233f"/><path d="M12 6v6l4 3" fill="none" stroke="#c9a877" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <div><h4>Opening Hours</h4><p>Monday to Friday, by appointment</p></div>
+        </div>
+      </div>
+
+      <form class="mock" onsubmit="return false">
+        <label for="nm">Your Name</label>
+        <input id="nm" type="text" placeholder="Full name">
+        <label for="em">Email Address</label>
+        <input id="em" type="email" placeholder="you@example.co.uk">
+        <label for="ph">Telephone</label>
+        <input id="ph" type="tel" placeholder="Daytime number">
+        <label for="sv">How can we help?</label>
+        <select id="sv">
+          <option>Family Law</option>
+          <option>Wills, Powers of Attorney &amp; Executries</option>
+          <option>Residential Property</option>
+          <option>Commercial Property</option>
+          <option>Court &amp; Civil Disputes</option>
+          <option>Employment</option>
+        </select>
+        <label for="ms">Your Message</label>
+        <textarea id="ms" placeholder="A few words about your matter"></textarea>
+        <button class="btn btn-gold" type="submit">Request a Call Back</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="wordmark" href="#top" style="color:#fff">
+          <span class="mark">Rollos<span style="color:var(--gold-soft)">.</span></span>
+          <span class="sub" style="color:var(--gold-soft)">Law LLP &middot; St Andrews</span>
+        </a>
+        <p style="margin-top:16px;max-width:34ch;color:#9aa2b6">A full-service Fife law firm serving individuals, families and businesses from St Andrews, Cupar, Glenrothes and Auchtermuchty.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Family Law</a></li>
+          <li><a href="#services">Private Client</a></li>
+          <li><a href="#services">Residential Property</a></li>
+          <li><a href="#services">Commercial Property</a></li>
+          <li><a href="#services">Court &amp; Disputes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Visit Us</h5>
+        <ul>
+          <li>6 Bell Street</li>
+          <li>St Andrews, Fife</li>
+          <li>KY16 9UX</li>
+          <li><a href="#contact">Request a Call Back</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="regline">Rollos Law LLP is regulated by the Law Society of Scotland.</span>
+      <span>&copy; 2026 Rollos Law LLP. All rights reserved.</span>
+      <span>Concept by <a href="https://andrei170.github.io/ag1/#services">AG Consulting</a></span>
+    </div>
+  </div>
+</footer>
+<div class="disclaimer">This is a demo concept created for illustration only. It is not the live Rollos Law LLP website.</div>
+
+<script>
+  document.querySelector('.burger').addEventListener('click',function(){
+    var l=document.querySelector('nav.links');
+    l.style.display = (l.style.display==='flex')?'none':'flex';
+    l.style.position='absolute';l.style.top='74px';l.style.right='0';l.style.left='0';
+    l.style.flexDirection='column';l.style.background='#0e1830';l.style.padding='18px 24px';l.style.gap='16px';
+  });
+</script>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LegalService","LocalBusiness"],
+      "@id": "https://www.rollos.co.uk/#organisation",
+      "name": "Rollos Law LLP",
+      "description": "A full-service Fife law firm offering family law, private client, residential and commercial property, court and employment services across St Andrews, Cupar, Glenrothes and Auchtermuchty.",
+      "url": "https://www.rollos.co.uk/",
+      "areaServed": ["St Andrews","Cupar","Glenrothes","Auchtermuchty","North East Fife","Fife","Scotland"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6 Bell Street",
+        "addressLocality": "St Andrews",
+        "addressRegion": "Fife",
+        "postalCode": "KY16 9UX",
+        "addressCountry": "GB"
+      },
+      "knowsAbout": ["Family Law","Wills and Powers of Attorney","Executries","Residential Conveyancing","Commercial Property","Civil Litigation","Employment Law"],
+      "memberOf": { "@type": "Organization", "name": "Law Society of Scotland" }
+    },
+    {
+      "@type": "Person",
+      "name": "Tony Anderson",
+      "jobTitle": "Senior Partner",
+      "worksFor": { "@id": "https://www.rollos.co.uk/#organisation" }
+    },
+    {
+      "@type": "Person",
+      "name": "Ken Smith",
+      "jobTitle": "Senior Partner",
+      "worksFor": { "@id": "https://www.rollos.co.uk/#organisation" }
+    }
+  ]
+}
+</script>
+</body>
+</html>
